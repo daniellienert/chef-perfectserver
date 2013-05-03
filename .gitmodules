@@ -28,3 +28,9 @@
 [submodule "cookbooks/database"]
 	path = cookbooks/database
 	url = https://github.com/opscode-cookbooks/database
+[submodule "cookbooks/postfix"]
+	path = cookbooks/postfix
+	url = git://github.com/opscode-cookbooks/postfix.git
+[submodule "cookbooks/git"]
+	path = cookbooks/git
+	url = git://github.com/opscode-cookbooks/git.git

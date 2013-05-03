@@ -19,6 +19,10 @@ include_recipe "build-essential"
 %w{
 joe
 htop
+ntp
+ntpdate
+dovecot-imapd
+dovecot-pop3d
 }.each do |pkg|
   package pkg do
     action :install
@@ -40,8 +44,15 @@ include_recipe "php"
 include_recipe "php::module_curl"
 include_recipe "php::module_mysql"
 
+# Setup Mail
+include_recipe "postfix"
+
 # Tools
 include_recipe "imagemagick"
 include_recipe "openssl"
+
+# Git
+include_recipe "git"
+include_recipe "git::server"
 
 
