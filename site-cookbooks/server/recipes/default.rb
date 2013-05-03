@@ -11,26 +11,37 @@
 include_recipe 'ohai'
 
 
-# Enable apt-get package
-chef.add_recipe "apt"
+# Basic Packages
+include_recipe "apt"
+include_recipe "build-essential"
+
+# Install packages
+%w{
+joe
+htop
+}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
 
 # Setup databases
-chef.add_recipe "mysql"
-chef.add_recipe "mysql::server"
-chef.add_recipe "database::mysql"
+include_recipe "mysql"
+include_recipe "mysql::server"
+include_recipe "database::mysql"
 
 # Setup apache
-chef.add_recipe "apache2"
-chef.add_recipe "apache2::mod_php5"
-chef.add_recipe "apache2::mod_rewrite"
+include_recipe "apache2"
+include_recipe "apache2::mod_php5"
+include_recipe "apache2::mod_rewrite"
 
 # Setup php
-chef.add_recipe "php"
-chef.add_recipe "php::module_curl"
-chef.add_recipe "php::module_mysql"
+include_recipe "php"
+include_recipe "php::module_curl"
+include_recipe "php::module_mysql"
 
 # Tools
-chef.add_recipe "imagemagick"
-chef.add_recipe "openssl"
+include_recipe "imagemagick"
+include_recipe "openssl"
 
 
