@@ -1,2 +1,9 @@
 /.vagrant/
 /.idea/
+
+/roles/
+!/roles/template.rb
+
+/backup/
+/cache/
+/secret/

@@ -19,24 +19,19 @@ Vagrant.configure("2") do |config|
 #    chef.data_bags_path = "data_bags"
 
 
+    # Set the roles
+    chef.roles_path = "roles"
+    chef.add_role("seraph")
 
     # Run the server provision
-
-    chef.add_recipe 'server'
-
-    #chef.add_recipe 'ohai'
-    #chef.add_recipe "apt"
-
-    #chef.add_recipe "apache2"
-    #chef.add_recipe "apache2::mod_php5"
-    #chef.add_recipe "apache2::mod_rewrite"
+    #chef.add_recipe 'server'
 
   end
 
   # Do some post provisioning
 #  config.vm.provision :shell, :path => "post_provision.sh"
 
-  config.vm.synced_folder ".", "/var/workspace", :nfs => true
+  config.vm.synced_folder ".", "/var/chef", :nfs => true
 
   config.vm.hostname = "dev.box"
   config.vm.network :private_network, ip: "192.168.164.123"

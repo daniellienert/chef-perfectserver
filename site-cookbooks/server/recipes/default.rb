@@ -15,6 +15,7 @@ include_recipe "build-essential"
 
 
 # Install packages
+
 %w{
 joe
 htop
@@ -38,15 +39,18 @@ dovecot-pop3d
   end
 end
 
-# Setup databases
+# Setup database Server
 include_recipe "mysql"
 include_recipe "mysql::server"
 include_recipe "database::mysql"
 
 # Setup apache
 include_recipe "apache2"
+include_recipe "apache2::mod_ssl"
 include_recipe "apache2::mod_php5"
 include_recipe "apache2::mod_rewrite"
+include_recipe "apache2::mod_fastcgi"
+include_recipe "apache2::mod_fcgid"
 
 # Setup php
 include_recipe "php"
@@ -57,6 +61,9 @@ include_recipe "php::module_apc"
 
 # Setup Mail
 include_recipe "postfix"
+
+# Setup pureftpd
+include_recipe "pureftpd"
 
 # Tools
 include_recipe "imagemagick"
