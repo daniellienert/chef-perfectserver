@@ -7,20 +7,29 @@
 # All rights reserved - Do Not Redistribute
 #
 
-
 include_recipe 'ohai'
-
 
 # Basic Packages
 include_recipe "apt"
 include_recipe "build-essential"
 
+
 # Install packages
 %w{
 joe
 htop
+unzip
+bzip2
+zip
+
 ntp
 ntpdate
+
+rkhunter
+fail2ban
+
+dovecot-mysql
+dovecot-sieve
 dovecot-imapd
 dovecot-pop3d
 }.each do |pkg|
@@ -43,6 +52,8 @@ include_recipe "apache2::mod_rewrite"
 include_recipe "php"
 include_recipe "php::module_curl"
 include_recipe "php::module_mysql"
+include_recipe "php::module_gd"
+include_recipe "php::module_apc"
 
 # Setup Mail
 include_recipe "postfix"
@@ -52,7 +63,7 @@ include_recipe "imagemagick"
 include_recipe "openssl"
 
 # Git
-include_recipe "git"
-include_recipe "git::server"
+#include_recipe "git"
+#include_recipe "git::server"
 
 

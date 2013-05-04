@@ -34,3 +34,12 @@
 [submodule "cookbooks/git"]
 	path = cookbooks/git
 	url = git://github.com/opscode-cookbooks/git.git
+[submodule "cookbooks/runit"]
+	path = cookbooks/runit
+	url = git://github.com/opscode-cookbooks/runit.git
+[submodule "cookbooks/pureftpd"]
+	path = cookbooks/pureftpd
+	url = git://github.com/railslove/chef-pureftpd.git
+[submodule "cookbooks/certificate"]
+	path = cookbooks/certificate
+	url = git://github.com/atomic-penguin/cookbook-certificate.git
