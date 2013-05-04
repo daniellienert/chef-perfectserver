@@ -46,3 +46,6 @@
 [submodule "cookbooks/ubuntu"]
 	path = cookbooks/ubuntu
 	url = git://github.com/brodock/chef-ubuntu.git
+[submodule "cookbooks/phpmyadmin"]
+	path = cookbooks/phpmyadmin
+	url = git://github.com/priestjim/chef-phpmyadmin.git
