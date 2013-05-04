@@ -43,3 +43,6 @@
 [submodule "cookbooks/certificate"]
 	path = cookbooks/certificate
 	url = git://github.com/atomic-penguin/cookbook-certificate.git
+[submodule "cookbooks/ubuntu"]
+	path = cookbooks/ubuntu
+	url = git://github.com/brodock/chef-ubuntu.git

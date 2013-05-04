@@ -11,6 +11,7 @@ include_recipe 'ohai'
 
 # Basic Packages
 include_recipe "apt"
+include_recipe "ubuntu"
 include_recipe "build-essential"
 
 
