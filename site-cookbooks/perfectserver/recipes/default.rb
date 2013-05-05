@@ -34,7 +34,6 @@ ntpdate
 
 rkhunter
 fail2ban
-gld
 
 graphicsmagick
 
@@ -88,9 +87,11 @@ include_recipe "php::module_apc"
 include_recipe "postfix"
 
 rewind "template[/etc/postfix/master.cf]" do
-  cookbook "server"
+  cookbook "perfectserver"
   source "postfix/master.cf.erb"
 end
+
+include_recipe "postfixgld"
 
 
 
@@ -112,7 +113,7 @@ include_recipe "git"
 
 # Web Applications
 include_recipe "phpmyadmin"
-include_recipe "server::phpmyadmin"
+include_recipe "perfectserver::phpmyadmin"
 
 include_recipe "roundcube"
 
@@ -121,6 +122,6 @@ include_recipe "roundcube"
 # Security
 
 # Fail2Ban
-include_recipe "server::fail2ban"
+include_recipe "perfectserver::fail2ban"
 
 
