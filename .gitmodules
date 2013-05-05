@@ -52,3 +52,6 @@
 [submodule "cookbooks/roundcube"]
 	path = cookbooks/roundcube
 	url = git://github.com/salgo/roundcube.git
+[submodule "cookbooks/postfixgld"]
+	path = cookbooks/postfixgld
+	url = git@github.com:daniellienert/chef-postfixgld.git
