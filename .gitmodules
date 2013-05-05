@@ -49,3 +49,6 @@
 [submodule "cookbooks/phpmyadmin"]
 	path = cookbooks/phpmyadmin
 	url = git://github.com/priestjim/chef-phpmyadmin.git
+[submodule "cookbooks/roundcube"]
+	path = cookbooks/roundcube
+	url = git://github.com/salgo/roundcube.git

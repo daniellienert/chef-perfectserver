@@ -79,4 +79,6 @@ include_recipe "git"
 include_recipe "phpmyadmin"
 include_recipe "server::phpmyadmin"
 
+include_recipe "roundcube"
+
 
