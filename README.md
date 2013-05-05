@@ -9,8 +9,7 @@ Tested on a ubuntu 13.04 bare image.
 Installed Components:
 ---------------------
 
-Services:
-^^^^^^^^^^^^^^
+#### Services:
 
 - apache2 (Mods: php5, ssl, rewrite, fastcgi, fcgid, suexec)
 - php5 (with curl, mysql, gd apc)
@@ -21,8 +20,7 @@ Services:
 - pureftpd
 
 
-Tools:
-^^^^^^^^^^^^^^
+#### Tools:
 
 - joe
 - htop
@@ -40,8 +38,7 @@ Tools:
 - graphicsmagick
 
 
-Applications
-^^^^^^^^^^^^^^
+#### Applications:
 
 - phpmyadmin
 - roundcube
