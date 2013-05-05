@@ -1,8 +1,8 @@
 /.vagrant/
 /.idea/
 
-/roles/
-!/roles/template.rb
+/roles/*
+!/roles/perfectserver_template.rb
 
 /backup/
 /cache/
