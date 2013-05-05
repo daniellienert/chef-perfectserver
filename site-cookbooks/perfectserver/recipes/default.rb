@@ -122,6 +122,6 @@ include_recipe "roundcube"
 # Security
 
 # Fail2Ban
-include_recipe "perfectserver::fail2ban"
+#include_recipe "perfectserver::fail2ban"
 
 

@@ -1,4 +1,3 @@
-
 service "fail2ban" do
   supports [ :status => true, :restart => true ]
   action [ :enable, :start ]
