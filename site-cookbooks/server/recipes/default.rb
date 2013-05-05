@@ -34,6 +34,9 @@ ntpdate
 
 rkhunter
 fail2ban
+gld
+
+graphicsmagick
 
 dovecot-mysql
 dovecot-sieve
@@ -46,10 +49,12 @@ dovecot-pop3d
 end
 
 
+
 # Setup database Server
 include_recipe "mysql"
 include_recipe "mysql::server"
 include_recipe "database::mysql"
+
 
 
 # Setup apache
@@ -67,6 +72,7 @@ include_recipe "apache2::mod_fcgid"
   end
 end
 apache_module "suexec"
+
 
 
 # Setup php
@@ -94,7 +100,6 @@ include_recipe "pureftpd"
 
 
 # Tools
-include_recipe "imagemagick"
 include_recipe "openssl"
 
 
@@ -103,10 +108,19 @@ include_recipe "openssl"
 include_recipe "git"
 #include_recipe "git::server"
 
+
+
 # Web Applications
 include_recipe "phpmyadmin"
 include_recipe "server::phpmyadmin"
 
 include_recipe "roundcube"
+
+
+
+# Security
+
+# Fail2Ban
+include_recipe "server::fail2ban"
 
 
