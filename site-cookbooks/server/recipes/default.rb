@@ -23,6 +23,7 @@ htop
 unzip
 bzip2
 zip
+pwgen
 
 ntp
 ntpdate
@@ -71,7 +72,11 @@ include_recipe "imagemagick"
 include_recipe "openssl"
 
 # Git
-#include_recipe "git"
+include_recipe "git"
 #include_recipe "git::server"
+
+# Web Applications
+include_recipe "phpmyadmin"
+include_recipe "server::phpmyadmin"
 
 
