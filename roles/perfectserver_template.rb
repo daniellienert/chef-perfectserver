@@ -32,7 +32,8 @@ override_attributes({
     #APACHE
 
     :apache => {
-        :contact => 'webmaster@example.net'
+        :contact => 'webmaster@example.net',
+        :default_site_enabled => TRUE
     },
 
 

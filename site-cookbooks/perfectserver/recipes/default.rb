@@ -23,6 +23,9 @@ include_recipe "build-essential"
 %w{
 joe
 htop
+traceroute
+nmap
+mailutils
 unzip
 bzip2
 zip
@@ -37,6 +40,14 @@ fail2ban
 
 graphicsmagick
 
+libsasl2-2 
+sasl2-bin 
+libsasl2-modules
+
+php5-json
+
+procmail
+postfix-mysql
 dovecot-mysql
 dovecot-sieve
 dovecot-imapd
